@@ -1,0 +1,182 @@
+<div
+id="content"
+class="flex-2 flex-col ml-[260px] transition-all duration-300 ease-in-out"
+>
+<!-- navbar -->
+      <navbar class="bg-transparent">
+        <div class="mx-auto p-4">
+          <div class="flex justify-end items-center gap-2.5 ">
+          <!-- profile -->
+            <div class="relative">
+              <!-- profile button -->
+               <button class="flex items-center gap-2 cursor-pointer focus:outline-none">
+                 <div class="bg-secondary w-8 h-8 rounded-full"></div>
+                 <span class="font-medium text-gray-800">Hanifan Pangabekti</span>
+                 <i class="bi bi-caret-right-fill text-gray-700 text-sm" id="profile-btn"></i> 
+               </button>
+               <!-- dopdrown menu -->
+                <div id="profile-menu" class=" hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                  <a
+                    href="./?p=ganti_password"
+                    class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-t-lg transition"
+                    >Ganti Password</a
+                  >
+                  <a
+                    href="./?p=logout"
+                    class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-b-lg transition"
+                    >Logout</a
+                  >
+                </div>
+            </div>  
+          </div>
+        </div>
+      </navbar>
+
+<!-- Hallo User --> 
+    <section class="mr-3.5">
+      <div
+        class=" py-3 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 px-3 shadow rounded-md tracking-tight"
+      >
+        <h1 class="text-3xl font-bold text-gray-800">Selamat Datang Hanifan</h1>
+        <p class="mt-2 text-gray-600">Dashboard E-Sensus Anda</p>
+      </div>
+    </section>
+
+    <!-- verifikasi -->
+    <div class="flex justify-end items-center my-3 mx-3">
+      <div class="flex flex-col shadow bg-amber-400/60 border-amber-500 text-center py-2 px-3">
+        <span>Belum Diverifikasi</span>
+      </div>
+    </div>
+
+    <!-- Hero section -->
+    <section class=" grid grid-cols-2 gap-0 mr-3.5">
+      <!-- colom 1 -->
+      <div class="container px-3 py-4 rounded-bl-md rounded-tl-md bg-[#fafafa]">
+       
+        <!-- Nama -->
+        <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >Nama Kepala Keluarga</label
+            >
+            <input
+              readonly
+              value="Hanifan Pangabekti"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+        </div>
+
+        <!-- Kewarganegaraan  -->
+        <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >Kewarganegaraan</label
+            >
+            <input
+              readonly
+              value="WNI"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+        </div>
+
+        <!-- NIK -->
+        <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >NIK</label
+            >
+            <input
+              readonly
+              value="3302102109200001"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+            </div>
+            
+          <!-- Tempat Tanggal Lahir -->
+          <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >Tempat Tanggal Lahir</label
+            >
+            <input
+              readonly
+              value="Banyumas, 13 juli 1945"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+          </div>
+      </div>
+        <!-- colom 2 -->
+      <div class="container  px-3 py-4 rounded-br-md rounded-tr-md bg-[#fafafa]">
+        <!-- Agama -->
+        <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >AGAMA</label
+            >
+            <input
+              readonly
+              value="Islam"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+        </div>
+        <!-- Jenis Kelamin  -->
+        <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >JENIS KELAMIN</label
+            >
+            <input
+              readonly
+              value="Laki-laki"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+        </div>
+        <!-- Pekerjaan -->
+        <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >PEKERJAAN</label
+            >
+            <input
+              readonly
+              value="Pegawai Negeri Sipil"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+            </div>
+          <!-- Pendidikan -->
+          <div class="mb-3 w-full">
+            <label class="text-xs uppercase text-gray-500"
+              >PENIDIDIKAN</label
+            >
+            <input
+              readonly
+              value="Satra 1"
+              class="w-full mt-2 border border-gray-300 rounded-md px-4 py-3"
+            />
+          </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="mr-3.5">
+    <div class="container mx-auto mt-1 flex items-center">
+      <div
+        class="bg-transparent py-2 w-full "
+      >
+        <div class="font-medium text-base text-gray-800">Copyright &copy; 2025 <span class="text-blue-500 font-semibold text-lg">E-sensus</span>.All right reserved.</div>
+      </div>
+    </div>
+  </section>
+
+    <!-- profile menu togle -->
+     <script>         
+          const profileBtn = document.getElementById("profile-btn" );
+          const profileMenu = document.getElementById("profile-menu");
+          
+          profileBtn.addEventListener('click', (e)=> {
+            e.stopPropagation();
+            profileMenu.classList.toggle('hidden');
+            profileBtn.classList.toggle("rotate-90");
+          });
+          
+          document.addEventListener('click', (e)=> {
+            if (!profileMenu.contains(e.target) && !profileBtn.contains(e.target)) {
+              profileMenu.classList.add('hidden');
+              profileBtn.classList.remove("rotate-90")
+            }
+          });
+     </script>

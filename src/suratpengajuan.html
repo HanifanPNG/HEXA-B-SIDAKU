@@ -1,0 +1,273 @@
+<div
+  id="content"
+  class="flex-2 flex-col ml-[260px] transition-all duration-300 ease-in-out"
+>
+  <!-- navbar -->
+  <navbar class="bg-transparent">
+    <div class="mx-auto p-4">
+      <div class="flex justify-end items-center gap-2.5">
+        <!-- profile -->
+        <div class="relative">
+          <!-- profile button -->
+          <button
+            class="flex items-center gap-2 cursor-pointer focus:outline-none"
+          >
+            <div class="bg-secondary w-8 h-8 rounded-full"></div>
+            <span class="font-medium text-gray-800">Hanifan Pangabekti</span>
+            <i
+              class="bi bi-caret-right-fill text-gray-700 text-sm"
+              id="profile-btn"
+            ></i>
+          </button>
+          <!-- dopdrown menu -->
+          <div
+            id="profile-menu"
+            class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50"
+          >
+            <a
+              href="./?p=ganti_password"
+              class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-t-lg transition"
+              >Ganti Password</a
+            >
+            <a
+              href="./?p=logout"
+              class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-b-lg transition"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </navbar>
+
+  <!-- FORM SURAT PENGAJUAN -->
+  <section
+    id="surat-pengajuan"
+    class="tab-content block transition-all duration-500 ease-in-out"
+  >
+    <div
+      class="bg-[#fafafa] rounded-lg shadow-md p-6 border border-gray-200 max-w-3xl mx-auto"
+    >
+      <!-- Judul -->
+      <h2 class="font-bold text-lg mb-4 text-gray-700 text-center">
+        Formulir Pengajuan Surat
+      </h2>
+      <p class="text-sm text-gray-500 text-center mb-6">
+        Gunakan formulir ini untuk mengajukan surat keterangan dari
+        desa/kelurahan.
+      </p>
+
+      <!-- Form -->
+      <form class="space-y-6">
+        <!-- Jenis Surat -->
+        <div>
+          <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+            Jenis Surat
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="md:col-span-2">
+              <label class="text-xs uppercase text-gray-500"
+                >Pilih Jenis Surat</label
+              >
+              <select
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+                required
+              >
+                <option value="">-- Pilih Jenis Surat --</option>
+                <option>Surat Keterangan Domisili</option>
+                <option>Surat Keterangan Usaha</option>
+                <option>Surat Keterangan Tidak Mampu</option>
+                <option>Surat Keterangan Pindah Datang</option>
+                <option>Surat Keterangan Pindah Keluar</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Pemohon -->
+        <div>
+          <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+            Data Pemohon
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs uppercase text-gray-500"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+                placeholder="Nama lengkap sesuai KTP"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-xs uppercase text-gray-500">NIK</label>
+              <input
+                type="text"
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+                placeholder="Nomor Induk Kependudukan"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-xs uppercase text-gray-500"
+                >Tempat Lahir</label
+              >
+              <input
+                type="text"
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+                placeholder="Contoh: Banyumas"
+              />
+            </div>
+            <div>
+              <label class="text-xs uppercase text-gray-500"
+                >Tanggal Lahir</label
+              >
+              <input
+                type="date"
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              />
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-xs uppercase text-gray-500"
+                >Alamat Lengkap</label
+              >
+              <textarea
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2 h-20 resize-none"
+                placeholder="Alamat lengkap sesuai domisili"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Keterangan Pengajuan -->
+        <div>
+          <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+            Keterangan Pengajuan
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="md:col-span-2">
+              <label class="text-xs uppercase text-gray-500"
+                >Keperluan Surat</label
+              >
+              <textarea
+                class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2 h-24 resize-none"
+                placeholder="Tuliskan alasan atau keperluan pengajuan surat"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upload Dokumen  -->
+        <div>
+          <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+            Dokumen Pendukung
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="md:col-span-2">
+              <div id="fileContainer" class="space-y-2">
+                <label class="text-xs uppercase text-gray-500"
+                  >Unggah Dokumen</label
+                >
+
+                <!-- Input file -->
+                <div class="flex items-center gap-2">
+                  <input
+                    type="file"
+                    name="dokumen[]"
+                    class="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 transition"
+                  />
+                  <button
+                    type="button"
+                    class="hapusFile bg-red-500 hover:bg-red-600 text-white text-xs font-medium py-2 px-3 rounded-md"
+                  >
+                    Hapus
+                  </button>
+                </div>
+              </div>
+
+              <!-- Tombol Tambah File -->
+              <button
+                type="button"
+                id="tambahFile"
+                class="mt-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-1.5 px-3 rounded-md"
+              >
+                + Tambah File
+              </button>
+              <p class="text-xs text-gray-400 mt-1">
+                Lampirkan KTP, KK, atau dokumen lain yang relevan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol  -->
+        <div class="flex justify-end gap-3">
+          <button
+            type="reset"
+            class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-md transition duration-200"
+          >
+            Batal
+          </button>
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+          >
+            Kirim Pengajuan
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+    <section class="mr-3.5">
+    <div class="container mx-auto mt-1 flex items-center">
+      <div
+        class="bg-transparent py-2 w-full "
+      >
+        <div class="font-medium text-base text-gray-800">Copyright &copy; 2025 <span class="text-blue-500 font-semibold text-lg">E-sensus</span>.All right reserved.</div>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const fileContainer = document.getElementById("fileContainer");
+  const tambahBtn = document.getElementById("tambahFile");
+
+  // Fungsi menambahkan input file 
+  tambahBtn.addEventListener("click", () => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "flex items-center gap-2";
+
+    const newInput = document.createElement("input");
+    newInput.type = "file";
+    newInput.name = "dokumen[]";
+    newInput.className =
+      "block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 transition";
+
+    const hapusBtn = document.createElement("button");
+    hapusBtn.type = "button";
+    hapusBtn.textContent = "Hapus";
+    hapusBtn.className =
+      "hapusFile bg-red-500 hover:bg-red-600 text-white text-xs font-medium py-2 px-3 rounded-md";
+
+    // Hapus kolom file 
+    hapusBtn.addEventListener("click", () => {
+      wrapper.remove();
+    });
+
+    wrapper.appendChild(newInput);
+    wrapper.appendChild(hapusBtn);
+    fileContainer.appendChild(wrapper);
+  });
+
+  document.querySelectorAll(".hapusFile").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.target.parentElement.remove();
+    });
+  });
+</script>

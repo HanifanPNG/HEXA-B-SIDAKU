@@ -1,0 +1,551 @@
+<div
+  id="content"
+  class="flex-2 flex-col ml-[260px] transition-all duration-300 ease-in-out"
+>
+  <!-- NAVBAR -->
+  <navbar class="bg-transparent">
+    <div class="mx-auto p-4">
+      <div class="flex justify-end items-center gap-2.5">
+        <!-- Profile -->
+        <div class="relative">
+          <button
+            class="flex items-center gap-2 cursor-pointer focus:outline-none"
+          >
+            <div class="bg-secondary w-8 h-8 rounded-full"></div>
+            <span class="font-medium text-gray-800">Hanifan Pangabekti</span>
+            <i
+              class="bi bi-caret-right-fill text-gray-700 text-sm"
+              id="profile-btn"
+            ></i>
+          </button>
+          <!-- Dropdown -->
+          <div
+            id="profile-menu"
+            class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50"
+          >
+            <a
+              href="./?p=ganti_password"
+              class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-t-lg transition"
+              >Ganti Password</a
+            >
+            <a
+              href="./?p=logout"
+              class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-b-lg transition"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </navbar>
+
+  <!-- HEADER -->
+  <section class="mr-3.5">
+    <div class="container mx-auto my-1 flex items-center">
+      <div
+        class="bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 py-3 w-full px-5 rounded-md"
+      >
+        <span class="font-bold text-lg text-gray-800">Data Keluarga</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- button edit-->
+  <div class="flex justify-start mr-3.5 my-3 gap-2">
+    <button
+      class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+    >
+      Tambah Anggota
+    </button>
+    <button
+      class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+    >
+      Hapus Anggota
+    </button>
+  </div>
+
+  <!-- KONTEN -->
+  <section class="container mx-auto my-2">
+    <div class="flex flex-col md:flex-row gap-4 mr-3.5">
+      <!-- DAFTAR ANGGOTA -->
+      <div
+        class="md:w-1/3 bg-[#fafafa] rounded-lg shadow-md p-4 border border-gray-200"
+      >
+        <h3 class="font-bold text-gray-700 mb-3">Anggota Keluarga</h3>
+        <ul class="space-y-2">
+          <li
+            class="anggota-item flex items-center gap-3 cursor-pointer hover:bg-blue-100 p-2 rounded-md bg-blue-200"
+            data-target="ayah"
+          >
+            <div class="w-10 h-10 bg-blue-400 rounded-full"></div>
+            <div>
+              <p class="font-semibold text-gray-800">Hanifan Pangabekti</p>
+              <p class="text-xs text-gray-500">Ayah</p>
+            </div>
+          </li>
+          <li
+            class="anggota-item flex items-center gap-3 cursor-pointer hover:bg-blue-100 p-2 rounded-md"
+            data-target="ibu"
+          >
+            <div class="w-10 h-10 bg-blue-400 rounded-full"></div>
+            <div>
+              <p class="font-semibold text-gray-800">H</p>
+              <p class="text-xs text-gray-500">Ibu</p>
+            </div>
+          </li>
+          <li
+            class="anggota-item flex items-center gap-3 cursor-pointer hover:bg-blue-100 p-2 rounded-md"
+            data-target="anak1"
+          >
+            <div class="w-10 h-10 bg-blue-400 rounded-full"></div>
+            <div>
+              <p class="font-semibold text-gray-800">Hamdan Azmi</p>
+              <p class="text-xs text-gray-500">Anak</p>
+            </div>
+          </li>
+          <li
+            class="anggota-item flex items-center gap-3 cursor-pointer hover:bg-blue-100 p-2 rounded-md"
+            data-target="anak2"
+          >
+            <div class="w-10 h-10 bg-blue-400 rounded-full"></div>
+            <div>
+              <p class="font-semibold text-gray-800">Karina Rumaisha</p>
+              <p class="text-xs text-gray-500">Anak</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DETAIL ANGGOTA -->
+      <div class="flex-1">
+        <!-- AYAH -->
+        <section
+          id="ayah"
+          class="tab-content block transition-all duration-500 ease-in-out"
+        >
+          <div
+            class="bg-[#fafafa] rounded-lg shadow-md p-6 border border-gray-200"
+          >
+            <h2 class="font-bold text-lg mb-2 text-gray-700">Data Ayah</h2>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs uppercase text-gray-500">NAMA</label>
+                <input
+                  readonly
+                  value=" Hanifan Pangabekti"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >KEWARGANEGARAAN</label
+                >
+                <input
+                  readonly
+                  value="WNI"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">NIK</label>
+                <input
+                  readonly
+                  value="987665767757567"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">
+                  TEMPAT TANGGAL LAHIR</label
+                >
+                <input
+                  readonly
+                  value="Banyumas, 13 juli 2006"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">AGAMA</label>
+                <input
+                  readonly
+                  value="Islam"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >JENIS KELAMIN</label
+                >
+                <input
+                  readonly
+                  value="Laki-laki"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">PEKERJAAN</label>
+                <input
+                  readonly
+                  value="PegawaI Negeri Sipil"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >PENDIDIKAN</label
+                >
+                <input
+                  readonly
+                  value="Satra 1"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+            </div>
+            <div class="flex justify-end mt-3">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+              >
+                Ubah
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ibu -->
+        <section
+          id="ibu"
+          class="tab-content hidden transition-all duration-500 ease-in-out"
+        >
+          <div
+            class="bg-[#fafafa] rounded-lg shadow-md p-6 border border-gray-200"
+          >
+            <h2 class="font-bold text-lg mb-2 text-gray-700">Data Ibu</h2>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs uppercase text-gray-500">NAMA</label>
+                <input
+                  readonly
+                  value=" H"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >KEWARGANEGARAAN</label
+                >
+                <input
+                  readonly
+                  value="WNI"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">NIK</label>
+                <input
+                  readonly
+                  value="76836583463865"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">
+                  TEMPAT TANGGAL LAHIR</label
+                >
+                <input
+                  readonly
+                  value="Banyumas, 18 Januari 2006"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">AGAMA</label>
+                <input
+                  readonly
+                  value="Islam"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >JENIS KELAMIN</label
+                >
+                <input
+                  readonly
+                  value="Perempuan"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">PEKERJAAN</label>
+                <input
+                  readonly
+                  value="PegawaI Negeri Sipil"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >PENDIDIKAN</label
+                >
+                <input
+                  readonly
+                  value="Satra 1"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+            </div>
+            <div class="flex justify-end mt-3">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+              >
+                Ubah
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Anak1 -->
+        <section
+          id="anak1"
+          class="tab-content hidden transition-all duration-500 ease-in-out"
+        >
+          <div
+            class="bg-[#fafafa] rounded-lg shadow-md p-6 border border-gray-200"
+          >
+            <h2 class="font-bold text-lg mb-2 text-gray-700">Data Anak</h2>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs uppercase text-gray-500">NAMA</label>
+                <input
+                  readonly
+                  value=" Hamdan Azmi"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >KEWARGANEGARAAN</label
+                >
+                <input
+                  readonly
+                  value="WNI"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">NIK</label>
+                <input
+                  readonly
+                  value="76836583456633"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">
+                  TEMPAT TANGGAL LAHIR</label
+                >
+                <input
+                  readonly
+                  value="Banyumas, 5 Januari 2027"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">AGAMA</label>
+                <input
+                  readonly
+                  value="Islam"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >JENIS KELAMIN</label
+                >
+                <input
+                  readonly
+                  value="Laki-laki"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">PEKERJAAN</label>
+                <input
+                  readonly
+                  value="Belum Bekerja"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >PENDIDIKAN</label
+                >
+                <input
+                  readonly
+                  value="Sekolah"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+            </div>
+            <div class="flex justify-end mt-3">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+              >
+                Ubah
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Anak2 -->
+        <section
+          id="anak2"
+          class="tab-content hidden transition-all duration-500 ease-in-out"
+        >
+          <div
+            class="bg-[#fafafa] rounded-lg shadow-md p-6 border border-gray-200"
+          >
+            <h2 class="font-bold text-lg mb-2 text-gray-700">Data Anak</h2>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs uppercase text-gray-500">NAMA</label>
+                <input
+                  readonly
+                  value="Karina Rumaisha"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >KEWARGANEGARAAN</label
+                >
+                <input
+                  readonly
+                  value="WNI"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">NIK</label>
+                <input
+                  readonly
+                  value="76836583422323"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">
+                  TEMPAT TANGGAL LAHIR</label
+                >
+                <input
+                  readonly
+                  value="Banyumas, 6 Januari 2028"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">AGAMA</label>
+                <input
+                  readonly
+                  value="Islam"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >JENIS KELAMIN</label
+                >
+                <input
+                  readonly
+                  value="Perempuan"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500">PEKERJAAN</label>
+                <input
+                  readonly
+                  value="Belum Bekerja"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+              <div>
+                <label class="text-xs uppercase text-gray-500"
+                  >PENDIDIKAN</label
+                >
+                <input
+                  readonly
+                  value="Sekolah"
+                  class="w-full mt-1 border border-gray-300 rounded-md px-4 py-3"
+                />
+              </div>
+            </div>
+            <div class="flex justify-end mt-3">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-1.5 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+              >
+                Ubah
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="mr-3.5">
+    <div class="container mx-auto flex items-center">
+      <div class="bg-transparent py-2 w-full">
+        <div class="font-medium text-base text-gray-800">
+          Copyright &copy; 2025
+          <span class="text-blue-500 font-semibold text-lg">E-sensus</span>.All
+          right reserved.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    // toggle profile menu
+    const profileBtn = document.getElementById("profile-btn");
+    const profileMenu = document.getElementById("profile-menu");
+
+    profileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      profileMenu.classList.toggle("hidden");
+      profileBtn.classList.toggle("rotate-90");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!profileMenu.contains(e.target) && !profileBtn.contains(e.target)) {
+        profileMenu.classList.add("hidden");
+        profileBtn.classList.remove("rotate-90");
+      }
+    });
+
+    // event klik anggota keluarga
+    const anggotaItems = document.querySelectorAll(".anggota-item");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    anggotaItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // reset warna list
+        anggotaItems.forEach((li) => li.classList.remove("bg-blue-200"));
+        item.classList.add("bg-blue-200");
+
+        // tampilkan konten sesuai target
+        const target = item.getAttribute("data-target");
+        tabContents.forEach((content) => {
+          if (content.id === target) {
+            content.classList.remove("hidden");
+            content.classList.add("block");
+          } else {
+            content.classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
+</div>

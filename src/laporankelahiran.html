@@ -1,0 +1,196 @@
+<div
+id="content"
+class="flex-2 flex-col ml-[260px] transition-all duration-300 ease-in-out"
+>
+<!-- navbar -->
+      <navbar class="bg-transparent">
+        <div class="mx-auto p-4">
+          <div class="flex justify-end items-center gap-2.5 ">
+          <!-- profile -->
+            <div class="relative">
+              <!-- profile button -->
+               <button class="flex items-center gap-2 cursor-pointer focus:outline-none">
+                 <div class="bg-secondary w-8 h-8 rounded-full"></div>
+                 <span class="font-medium text-gray-800">Hanifan Pangabekti</span>
+                 <i class="bi bi-caret-right-fill text-gray-700 text-sm" id="profile-btn"></i> 
+               </button>
+               <!-- dopdrown menu -->
+                <div id="profile-menu" class=" hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                  <a
+                    href="./?p=ganti_password"
+                    class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-t-lg transition"
+                    >Ganti Password</a
+                  >
+                  <a
+                    href="./?p=logout"
+                    class="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-b-lg transition"
+                    >Logout</a
+                  >
+                </div>
+            </div>  
+          </div>
+        </div>
+      </navbar>
+
+      <!-- FORM LAPORAN KELAHIRAN -->
+<section
+  id="laporan-kelahiran"
+  class="tab-content block transition-all duration-500 ease-in-out"
+>
+  <div
+    class="bg-[#fafafa] rounded-lg shadow-md p-6 border border-gray-200 max-w-3xl mx-auto"
+  >
+    <!-- Judul -->
+    <h2 class="font-bold text-lg mb-4 text-gray-700 text-center">
+      Formulir Laporan Kelahiran
+    </h2>
+    <p class="text-sm text-gray-500 text-center mb-6">
+      Silakan isi data dengan benar untuk pencatatan kelahiran resmi.
+    </p>
+
+    <!-- Form -->
+    <form class="space-y-6">
+      <!-- Data Anak -->
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+          Data Anak
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs uppercase text-gray-500">Nama Lengkap Anak</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="Masukkan nama anak"
+            />
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">Jenis Kelamin</label>
+            <select
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+            >
+              <option value="">Pilih jenis kelamin</option>
+              <option>Laki-laki</option>
+              <option>Perempuan</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">Tempat Lahir</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="Contoh: Banyumas"
+            />
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">Tanggal Lahir</label>
+            <input
+              type="date"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Orang Tua -->
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+          Data Orang Tua
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs uppercase text-gray-500">Nama Ayah</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="Nama Ayah"
+            />
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">NIK Ayah</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="NIK Ayah"
+            />
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">Nama Ibu</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="Nama Ibu"
+            />
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">NIK Ibu</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="NIK Ibu"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Pelapor -->
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2 border-b pb-1">
+          Data Pelapor
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs uppercase text-gray-500">Nama Pelapor</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="Nama pelapor"
+            />
+          </div>
+          <div>
+            <label class="text-xs uppercase text-gray-500">Hubungan dengan Anak</label>
+            <input
+              type="text"
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2"
+              placeholder="Contoh: Ayah, Ibu, Keluarga"
+            />
+          </div>
+          <div class="md:col-span-2">
+            <label class="text-xs uppercase text-gray-500">Alamat Lengkap</label>
+            <textarea
+              class="w-full mt-1 border border-gray-300 rounded-md px-4 py-2 h-20 resize-none"
+              placeholder="Alamat lengkap pelapor"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Aksi -->
+      <div class="flex justify-end gap-3">
+        <button
+          type="reset"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-md transition duration-200"
+        >
+          Batal
+        </button>
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-sm transition duration-200 cursor-pointer"
+        >
+          Kirim Laporan
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- footer -->
+    <section class="mr-3.5">
+    <div class="container mx-auto mt-1 flex items-center">
+      <div
+        class="bg-transparent py-2 w-full "
+      >
+        <div class="font-medium text-base text-gray-800">Copyright &copy; 2025 <span class="text-blue-500 font-semibold text-lg">E-sensus</span>.All right reserved.</div>
+      </div>
+    </div>
+  </section>
